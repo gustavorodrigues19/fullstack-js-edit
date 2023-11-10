@@ -10,7 +10,7 @@
 
 6. Criação de Objetos: Escreva um programa JavaScript para criar um objeto que represente um carro, com propriedades como marca, modelo e ano, e um método para exibir essas informações.
 
-7. Acessando Propriedades: Escreva um programa JavaScript para acessar as propriedades de um objeto usando tanto a notação de ponto quanto a notação de colchetes.
+7. Acessando Propriedades: Escreva um programa JavaScript para acessar as propriedades de um objeto usando tanto a notação de ponto quanto a notação de parenteses retos.
 
 8. Adicionando Propriedades: Escreva um programa JavaScript para adicionar uma nova propriedade a um objeto existente.
 
