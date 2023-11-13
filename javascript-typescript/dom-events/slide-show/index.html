@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Slides</title>
+  </head>
+  <body>
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="images/img_nature_wide.jpg" style="width: 100%" />
+        <div class="text">Caption First</div>
+      </div>
+
+      <div class="slide fade">
+        <img src="images/img_snow_wide.jpg" style="width: 100%" />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="slide fade">
+        <img src="images/img_mountains_wide.jpg" style="width: 100%" />
+        <div class="text">Caption Three</div>
+      </div>
+
+      <a class="prev" onclick="handleSlides(-1)">❮</a>
+      <a class="next" onclick="handleSlides(1)">❯</a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
