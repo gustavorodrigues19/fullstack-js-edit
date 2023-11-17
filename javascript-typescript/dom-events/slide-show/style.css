@@ -6,7 +6,7 @@ body {
   margin: 0;
 }
 .slide {
-  display: block;
+  display: none;
 }
 img {
   vertical-align: middle;
