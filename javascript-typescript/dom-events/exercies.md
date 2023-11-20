@@ -1,4 +1,9 @@
-1 - Adicione e remova os items na to-do-list. Os arquivos necessários estão dentro da pasta to-do-list. Utilize apenas vanila js.
-2 - Adicione, altere e remova os items no carrrinho utilizando apenas vanila js. O total deve ser recalculado após cada operação . Os arquivos necessários estão dentro da pasta amazon-cart.
-3 - Valide o email e senha(acima de 6 caracters) e ao submeter o formulário deve aparecer um alert() com a mensagem "Senha bem vindo!". Se as validações falharem mostre na tela a mensagem "Valores inválidos" (na cor vermelha). Utilize apenas vanila js.
-4 - Faça a calculadora funcionar utilizando apenas vanila js. Os arquivos necessários estão dentro da pasta calculator.
+01 - Alterando o Conteúdo de Texto: Escreva um programa JavaScript que altere o conteúdo de texto de um elemento HTML quando um botão for clicado.
+
+02 - Adicionando e Elementos: Escreva um programa JavaScript que adicione um novo item a uma lista quando um botão for clicado.
+
+03 - Removendo Elementos: Escreva um programa JavaScript que remova um item de uma lista quando o próprio item for clicado.
+
+04 - Campo de Entrada de Formulário: Escreva um programa JavaScript que exiba o valor atual de um campo de entrada de texto em um elemento de parágrafo à medida que o usuário digita.
+
+05 - Evento Mouseover: Escreva um programa JavaScript que altere a cor de fundo de um elemento HTML quando o cursor do mouse
