@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      onmouseover="handleMouseOver()"
+      onmouseleave="handleMouseLeave()"
+      style="height: 250px; width: 250px; background-color: #000"
+    ></div>
+  </body>
+  <script>
+    function handleMouseOver() {
+      const div = document.querySelector("div");
+      div.style.backgroundColor = "green";
+    }
+    function handleMouseLeave() {
+      const div = document.querySelector("div");
+      div.style.backgroundColor = "black";
+    }
+  </script>
+</html>

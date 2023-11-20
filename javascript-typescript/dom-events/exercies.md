@@ -6,4 +6,4 @@
 
 04 - Campo de Entrada de Formulário: Escreva um programa JavaScript que exiba o valor atual de um campo de entrada de texto em um elemento de parágrafo à medida que o usuário digita.
 
-05 - Evento Mouseover: Escreva um programa JavaScript que altere a cor de fundo de um elemento HTML quando o cursor do mouse
+05 - Evento Mouseover: Escreva um programa JavaScript que altere a cor de fundo de um elemento HTML quando o cursor do mouse passar por cima.

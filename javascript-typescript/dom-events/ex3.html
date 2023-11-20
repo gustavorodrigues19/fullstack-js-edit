@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="addItem()">Add</button>
+    <ul id="ul-list">
+      <!-- <li onclick="removeItem(this)">item 1</li>
+      <li onclick="removeItem(this)">item 2</li> -->
+    </ul>
+  </body>
+  <script>
+    function removeItem(elem) {
+      elem.remove();
+    }
+    function addItem() {
+      const liSize = document.getElementsByTagName("li").length;
+
+      const li = document.createElement("li");
+      const textLi = document.createTextNode(`item ${liSize + 1}`);
+      li.appendChild(textLi);
+
+      li.addEventListener("click", function () {
+        li.remove();
+      });
+
+      const ul = document.getElementById("ul-list");
+      ul.appendChild(li);
+    }
+  </script>
+</html>
