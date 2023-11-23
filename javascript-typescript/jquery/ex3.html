@@ -17,8 +17,10 @@
       <li>Clique para remover</li>
     </ul>
     <script>
-      $("#myList").on("click", "li", function () {
-        $(this).remove();
+      $(document).ready(function () {
+        $("#myList").on("click", "li", function () {
+          $(this).remove();
+        });
       });
     </script>
   </body>

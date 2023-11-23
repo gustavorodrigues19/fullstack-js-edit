@@ -13,8 +13,10 @@
   <body>
     <div>Click here</div>
     <script>
-      $("div").click(function () {
-        $(this).text("Clicked");
+      $(document).ready(function () {
+        $("div").click(function () {
+          $(this).text("Clicked");
+        });
       });
     </script>
   </body>

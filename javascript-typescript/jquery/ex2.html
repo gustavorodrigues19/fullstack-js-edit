@@ -14,8 +14,10 @@
     <button id="addButton">Adicionar item</button>
     <ul id="myList"></ul>
     <script>
-      $("#addButton").click(function () {
-        $("#myList").append("<li>Novo item</li>");
+      $(document).ready(function () {
+        $("#addButton").click(function () {
+          $("#myList").append("<li>Novo item</li>");
+        });
       });
     </script>
   </body>
