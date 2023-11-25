@@ -16,7 +16,18 @@
     <script>
       $(document).ready(function () {
         $("#addButton").click(function () {
+          // const liElem = document.createElement("li");
+          // const textNode = document.createTextNode("Novo item");
+          // liElem.appendChild(textNode);
+          // const ulElem = document.getElementById("myList");
+          // ulElem.appendChild(liElem);
+          // São a mesma coisa
+
           $("#myList").append("<li>Novo item</li>");
+        });
+
+        $("#myList").on("click", "li", function () {
+          $(this).remove();
         });
       });
     </script>

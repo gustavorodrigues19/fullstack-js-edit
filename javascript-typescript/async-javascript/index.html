@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel=" stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div style="display: flex; gap: 150px">
+      <div id="promise-wrapper" class="card">
+        <h3>PROMISE</h3>
+        <div id="promise-loader" class="loader"></div>
+        <ul id="promise-list"></ul>
+      </div>
+      <div id="async-wrapper" class="card">
+        <h3>ASYNC/AWAIT</h3>
+        <div id="async-loader" class="loader"></div>
+        <ul id="async-await-list"></ul>
+      </div>
+    </div>
+  </body>
+  <script>
+    const resp = fetch("https://random-data-api.com/api/v2/users?size=10")
+      .then((data) => data.json())
+      .then((data) => {
+        const spinner = document.querySelector("#promise-loader");
+        spinner.style.display = "none";
+        const ulElem = document.getElementById("promise-list");
+        data.forEach((user) => {
+          const liElem = document.createElement("li");
+          const textNode = document.createTextNode(user.first_name);
+          liElem.appendChild(textNode);
+          ulElem.appendChild(liElem);
+        });
+      })
+      .catch((err) => {
+        const divElem = document.getElementById("promise-wrapper");
+        divElem.innerText = "Error loading users";
+      });
+
+    async function getUsers() {
+      try {
+        const data = await fetch(
+          "https://random-data-api.com/api/v2/users?size=10"
+        );
+        const users = await data.json();
+        setTimeout(() => {
+          const spinner = document.querySelector("#async-loader");
+          spinner.style.display = "none";
+          const ulElem = document.getElementById("async-await-list");
+          users.forEach((user) => {
+            const liElem = document.createElement("li");
+            const textNode = document.createTextNode(user.first_name);
+            liElem.appendChild(textNode);
+            ulElem.appendChild(liElem);
+          });
+        }, 5000);
+      } catch (err) {
+        const divElem = document.getElementById("async-wrapper");
+        divElem.innerText = "Error loading users";
+      }
+    }
+    getUsers();
+  </script>
+</html>
