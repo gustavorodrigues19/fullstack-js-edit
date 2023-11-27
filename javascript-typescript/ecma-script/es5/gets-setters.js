@@ -4,7 +4,7 @@ var obj = {
     return this._value;
   },
   set value(value) {
-    this._value = value;
+    this._value = value * 2;
   },
 };
 

@@ -1,7 +1,7 @@
-var json = '{"name":"John", "age":30, "city":"New York"}';
-var obj = JSON.parse(json);
-console.log(obj.name); // John
+const jsonStringfied = '{"name":"John", "age":30, "city":"New York"}';
+const objParsed = JSON.parse(jsonStringfied);
+console.log(objParsed.name); // John
 
-var obj = { name: "John", age: 30, city: "New York" };
-var json = JSON.stringify(obj);
+const obj = { name: "John", age: 30, city: "New York" };
+const json = JSON.stringify(obj);
 console.log(json); // '{"name":"John","age":30,"city":"New York"}'
