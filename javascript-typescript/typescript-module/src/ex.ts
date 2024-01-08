@@ -1,5 +1,8 @@
 // ex1
 const calcSum = (a: number, b: number): number => a + b;
+// function calcSum2(a: number, b: number): number {
+//   return a + b;
+// }
 
 console.log(calcSum(1, 2));
 
@@ -28,12 +31,42 @@ interface CarTypeInterface {
   brand: string;
 }
 
-const car: {
+type cartType = {
+  brand: string;
   model: string;
   year: number;
-  brand: string;
-} = {
-  model: "bmw x3",
-  year: 1999,
+  toString(): string;
+};
+
+const car: cartType = {
   brand: "bmw",
+  model: "x3",
+  year: 1999,
+  toString(): string {
+    return `${this.brand} ${this.model} ${this.year}`;
+  },
+};
+
+console.log(car.toString());
+
+// ex4
+const fetchData = async () => {
+  const resp = await fetch("https://random-data-api.com/api/v2/users?size=2");
+  const content = await resp.json();
+  console.log(content);
+};
+
+fetchData();
+
+// ex5
+let isDone: boolean = true;
+// isDone = "string";
+
+// ex6
+const person = {
+  firstName: "Gustavo",
+  lastName: "Rodrigues",
+  greeting() {
+    return `Hello ${this.firstName} ${this.lastName}`;
+  },
 };
