@@ -32,3 +32,12 @@ function sum(a) {
   console.log(a);
 }
 sum(1);
+
+const getOnOff = (isOn) =>
+  isOn ? console.log("Ligado") : console.log("Desligado");
+
+getOnOff(false);
+
+// const getSignTernary = (x) =>
+//   x > 0 ? "Positivo" : x < 0 ? "Negativo" : "Zero";
+// Evitar usar ternário aninhado

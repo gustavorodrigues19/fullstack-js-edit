@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch("https://random-data-api.com/api/v2/users?size=100")
+        .then((response) => response.json())
+        .then((response) => {
+          const bodyElement = document.querySelector("body");
+          const ulElement = document.createElement("ul");
+          bodyElement.appendChild(ulElement);
+
+          response.forEach((user) => {
+            const liElement = document.createElement("li");
+            liElement.innerHTML = user.first_name;
+            console.log(user);
+            ulElement.appendChild(liElement);
+          });
+        });
+    </script>
+  </body>
+</html>
