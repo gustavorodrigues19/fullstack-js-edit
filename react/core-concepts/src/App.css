@@ -1,0 +1,21 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  min-height: 100vh;
+}
+
+.app-container-back-button {
+  margin-top: 20px;
+}
+
+.app-container-back-button a {
+  color: white;
+  text-decoration: none;
+  background: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+}

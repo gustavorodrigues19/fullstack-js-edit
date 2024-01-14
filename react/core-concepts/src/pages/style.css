@@ -1,0 +1,39 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.home-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.home-list-item {
+  width: 20rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.home-list-item > a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
