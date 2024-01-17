@@ -1,5 +1,4 @@
 import "./style.css";
-import propTypes from "prop-types";
 
 function ProductComponent(props) {
   return (
@@ -11,25 +10,19 @@ function ProductComponent(props) {
   );
 }
 
-ProductComponent.propTypes = {
-  name: propTypes.string.isRequired,
-  price: propTypes.number.isRequired,
-  description: propTypes.string.isRequired,
-};
-
 const productList = [
   {
-    name: "Product 1",
+    name: "Product",
     price: 100,
     description: "Description 1",
   },
   {
-    name: "Product 2",
+    name: "Product",
     price: 200,
     description: "Description 2",
   },
   {
-    name: "Product 3",
+    name: "Product",
     price: 300,
     description: "Description 3",
   },
@@ -39,14 +32,18 @@ export default function ComponentsPropsPage() {
   return (
     <div>
       <h1>Components & Props</h1>
-      {productList.map((product, index) => (
-        <ProductComponent
-          name={product.name}
-          price={product.price}
-          description={product.description}
-          key={`${index}-${product.name}`}
-        />
-      ))}
+      {productList.map((product, index) => {
+        console.log(`${index}-${product.name}`);
+        return (
+          <div key={`${index}-${product.name}`}>
+            <ProductComponent
+              name={product.name}
+              price={product.price}
+              description={product.description}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
