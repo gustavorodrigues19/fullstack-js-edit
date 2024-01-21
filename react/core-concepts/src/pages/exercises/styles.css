@@ -1,0 +1,9 @@
+.exercises-card-list {
+  display: flex;
+  gap: 10px;
+}
+
+.exercises-card-container {
+  border: 1px solid white;
+  padding: 10px;
+}
