@@ -1,5 +1,6 @@
 import "./styles.css";
 import { CardComponent } from "../../components/CardComponent";
+import { useState } from "react";
 
 const cardWithImagesList = [
   {
@@ -38,28 +39,74 @@ export const CardExercise = () => (
   </>
 );
 
-export default function ExercisesPage() {
+function FormExercise() {
+  const initialValues = {
+    name: "",
+    email: "",
+    notes: "",
+  };
+  const [formFields, setFormFields] = useState(initialValues);
+
+  const handleChangeField = (event, key) => {
+    const value = event.target.value;
+    setFormFields({
+      ...formFields,
+      [key]: value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const msg = `
+      name:${formFields.name}
+      email:${formFields.email}
+      notes:${formFields.notes}
+    `;
+    alert(msg);
+    setFormFields(initialValues);
+  };
+
   return (
-    <div>
-      <CardExercise />
+    <>
       <h1>02. Contact form</h1>
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div>
             <label>Nome:</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={formFields.name}
+              onChange={(e) => handleChangeField(e, "name")}
+            />
           </div>
           <div>
             <label>Email:</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={formFields.email}
+              onChange={(e) => handleChangeField(e, "email")}
+            />
           </div>
           <div>
             <label>Assunto:</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={formFields.notes}
+              onChange={(e) => handleChangeField(e, "notes")}
+            />
           </div>
           <button type="submit">Submit</button>
         </form>
       </div>
+    </>
+  );
+}
+
+export default function ExercisesPage() {
+  return (
+    <div>
+      <CardExercise />
+      <FormExercise />
     </div>
   );
 }

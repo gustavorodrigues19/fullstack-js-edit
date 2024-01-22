@@ -9,6 +9,7 @@ import ListKeysPage from "./pages/07-lists-keys";
 import FormsPage from "./pages/08-forms";
 import ExercisesPage from "./pages/exercises";
 import TodoListPage from "./pages/exercises/todo-list";
+import UseEffectPage from "./pages/09-use-effect";
 
 export const ROUTES_LIST = [
   {
@@ -54,6 +55,11 @@ export const ROUTES_LIST = [
     title: "Forms",
     path: "/forms",
     element: <FormsPage />,
+  },
+  {
+    title: "Use Effect",
+    path: "/use-effect",
+    element: <UseEffectPage />,
   },
   {
     title: "Exercises",
