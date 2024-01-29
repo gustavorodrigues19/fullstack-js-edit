@@ -1,14 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootPage from "./pages";
 import PostPage from "./pages/post";
+import NavBarComponent from "./components/navbar";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <RootPage />,
+    element: (
+      <NavBarComponent>
+        <RootPage />
+      </NavBarComponent>
+    ),
   },
   {
     path: "/post/:id",
-    element: <PostPage />,
+    element: (
+      <NavBarComponent>
+        <PostPage />
+      </NavBarComponent>
+    ),
   },
 ]);
